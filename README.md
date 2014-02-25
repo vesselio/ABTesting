@@ -1,2 +1,2 @@
-ios-framework
+Vessel iOS-framework
 =============
