@@ -1,8 +1,8 @@
 //
 //  Vessel.h
-//  Vessel
+//  Vessel Framework Version 0.7
 //
-//  Copyright (c) 2013 Vessel. All rights reserved.
+//  Copyright (c) 2014 Vessel. All rights reserved.
 //
 
 #import <Vessel/VesselAB.h>
