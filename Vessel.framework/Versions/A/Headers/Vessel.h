@@ -16,12 +16,6 @@
  */
 @property (nonatomic, readonly) NSString *appSecret;
 
-/** The timeout interval, in seconds. If during a connection attempt the request remains idle for longer
- than the timeout interval, the request is considered to have timed out.
- The default timeout interval is 10 seconds.
- */
-@property (nonatomic) NSInteger timeoutInterval;
-
 
 /** Returns a singleton that is an instance of Vessel SDK.
  @return Singleton instance of class Vessel.
