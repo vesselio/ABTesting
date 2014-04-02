@@ -26,8 +26,6 @@
 /** Initializes Vessel SDK. This method should be called before calling any other Vessel SDK method.
  
  @param appSecret An app secret used to initialize the app.
- 
- @return Returns a BOOL value that indicates whether the initialization was successful.
 */
 - (void) initializeWithAppSecret:(NSString*)appSecret;
 
@@ -37,5 +35,14 @@
  The default timeout interval is 10 seconds.
 */
 - (void) setTimeoutInterval:(NSInteger)seconds;
+
+
+/** The method allows you to set custom filter key and values. It will show A/B test to users who will given
+ set of filters.
+ 
+ @param filters - Valid NSDictionary containly filter and its values.
+
+*/
+- (void) setFilters:(NSDictionary *) filters;
 
 @end
