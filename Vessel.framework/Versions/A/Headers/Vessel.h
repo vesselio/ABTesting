@@ -29,13 +29,13 @@
  
  @return Returns a BOOL value that indicates whether the initialization was successful.
 */
-+ (BOOL) initializeWithAppSecret:(NSString*)appSecret;
+- (void) initializeWithAppSecret:(NSString*)appSecret;
 
 
 /** The timeout interval, in seconds. If during a connection attempt the request remains idle for longer
  than the timeout interval, the request is considered to have timed out. 
  The default timeout interval is 10 seconds.
 */
-+ (void) setTimeoutInterval:(NSInteger)seconds;
+- (void) setTimeoutInterval:(NSInteger)seconds;
 
 @end
