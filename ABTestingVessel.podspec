@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'ABTestingVessel'
-  s.version      = '0.9.2'
+  s.version      = '1.0'
   s.author       = { 'Vessel' => 'support@vessel.io' }
   s.license      = { :type => 'Commercial', :text => 'Read https://www.vessel.io/tos/' }
   s.homepage     = 'https://vessel.io'
@@ -25,7 +25,6 @@ Pod::Spec.new do |s|
   s.source = { :git => 'https://github.com/vesselio/ABTesting.git', :tag => "#{s.version}" }
   s.platform = :ios, '6.0'
   s.frameworks = 'SystemConfiguration'
-  s.weak_frameworks = 'AdSupport'
   s.requires_arc = true
   s.library      = 'sqlite3'
   s.preserve_paths = 'Vessel.framework'
