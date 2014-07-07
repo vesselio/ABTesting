@@ -1,7 +1,7 @@
 //
 //  VesselAB.h
 //  Vessel Framework Version 1.1
-// 
+//
 //  Copyright (c) 2014 Vessel. All rights reserved.
 //
 
@@ -91,18 +91,28 @@ extern NSString *const VesselABTestChangedNotification;
 + (NSString*) fromTest:(NSString*)testName getVariableValueFor:(NSString*)variableKey defaultValue:(NSString *)defaultValue;
 
 
-/** Returns the assetUrl associated with a given test asset variation variable. If there is none associated or the test failed to load then the defaultValue is returned.
+/** Returns the boolean value associated with a given test variation variable. If there is none associated or the test failed to load then the defaultValue is returned.
  
  @param testName The test name from which variation variable needs to be retrieved.
  @param variableKey The variableKey whose value is to the retrieved.
- @param defaultValue In case there is no variation variable named variationVariable or if the test failed to load then the defaultValue is returned.
+
  */
++ (BOOL) fromTest:(NSString*)testName getBooleanFor:(NSString*)variableKey;
+
+/** Returns the assetUrl associated with a given test asset variation variable. If there is none associated or the test failed to load then the defaultValue is returned.
+  +
+  + @param testName The test name from which variation variable needs to be retrieved.
+  + @param variableKey The variableKey whose value is to the retrieved.
+  + @param defaultValue In case there is no variation variable named variationVariable or if the test failed to load then the defaultValue is returned.
+  + */
 + (NSString*) fromTest:(NSString*)testName getAssetUrl:(NSString*)variableKey defaultValue:(NSString *)defaultValue;
 
+
 /**
- Get the image associated with a given test variation variable. If there is none associated or the test failed to load then the will execute failure block.
-*/
+  + Get the image associated with a given test variation variable. If there is none associated or the test failed to load then the will execute failure block.
+  +*/
 +(void) fromTest:(NSString*)testName getImageFor:(NSString*)variableKey success:(void (^)(UIImage *variationImage)) success failureBlock:(void (^)())failure;
+
 
 /** Reports a checkpoint to the Vessel server for given active test.
  
@@ -163,5 +173,7 @@ extern NSString *const VesselABTestChangedNotification;
 @param userId A string to be associated with sessions and checkpoints.
  */
 + (void) setUserId:(NSString*)userId;
+
+
 
 @end
