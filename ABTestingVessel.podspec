@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
   s.author             = { "vesselio" => "founders@vessel.io" }
   s.social_media_url = "http://twitter.com/vesselio"
 
-  s.source = { :git => 'https://github.com/vesselio/ABTesting.git', :branch => "#{s.branch}" }
+  s.source = { :git => 'https://github.com/vesselio/ABTesting.git'}
   s.platform = :ios, '6.0'
   s.frameworks = 'SystemConfiguration','CFNetwork','Security'
   s.requires_arc = true
