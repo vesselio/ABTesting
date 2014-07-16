@@ -1,7 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'ABTestingVessel'
   s.version      = '1.2'
-  s.branch       = 'Studio'
   s.author       = { 'Vessel' => 'support@vessel.io' }
   s.license      = { :type => 'Commercial', :text => 'Read https://www.vessel.io/tos/' }
   s.homepage     = 'https://vessel.io'
@@ -23,7 +22,7 @@ Pod::Spec.new do |s|
   s.author             = { "vesselio" => "founders@vessel.io" }
   s.social_media_url = "http://twitter.com/vesselio"
 
-  s.source = { :git => 'https://github.com/vesselio/ABTesting.git'}
+  s.source = { :git => 'https://github.com/vesselio/ABTesting.git', :branch => "Studio" }
   s.platform = :ios, '6.0'
   s.frameworks = 'SystemConfiguration','CFNetwork','Security'
   s.requires_arc = true
