@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'ABTestingVessel'
-  s.version      = '1.2'
+  s.version      = '1.2.1'
   s.author       = { 'Vessel' => 'support@vessel.io' }
   s.license      = { :type => 'Commercial', :text => 'Read https://www.vessel.io/tos/' }
   s.homepage     = 'https://vessel.io'
