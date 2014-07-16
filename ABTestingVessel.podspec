@@ -30,4 +30,5 @@ Pod::Spec.new do |s|
   s.preserve_paths = 'Vessel.framework'
   s.public_header_files = 'Vessel.framework/**/*.h'
   s.vendored_frameworks = 'Vessel.framework'
+  s.xcconfig = { 'OTHER_LDFLAGS' => '-ObjC -all_load', 'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_ROOT)/ABTestingVessel"' }
 end
