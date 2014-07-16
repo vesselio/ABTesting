@@ -1,6 +1,6 @@
 //
 //  VesselAB.h
-//  Vessel Framework Version 1.1
+//  Vessel Framework Version 1.2
 //
 //  Copyright (c) 2014 Vessel. All rights reserved.
 //
