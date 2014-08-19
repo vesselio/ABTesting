@@ -1,6 +1,6 @@
 //
 //  VesselAB.h
-//  Vessel Framework Version 1.1
+//  Vessel Framework Version 1.2
 // 
 //  Copyright (c) 2014 Vessel. All rights reserved.
 //
@@ -71,9 +71,10 @@ extern NSString *const VesselABTestChangedNotification;
 
 
 /**
+ From Framework v1.2 Vessel  handles test activation automatically
  @param testName - Look and activate test with given name
 */
-+ (void) activateTest:(NSString *)testName;
++ (void) activateTest:(NSString *)testName __deprecated;
 
 
 /** Returns the variation for a particular test name. If the test assigned to the device doesn't match testName then VesselABTestVariationUnknown is returned.
@@ -91,6 +92,14 @@ extern NSString *const VesselABTestChangedNotification;
 + (NSString*) fromTest:(NSString*)testName getVariableValueFor:(NSString*)variableKey defaultValue:(NSString *)defaultValue;
 
 
+/** Returns the boolean value associated with a given test variation variable. If there is none associated or the test failed to load then the defaultValue is returned.
+ 
+ @param testName The test name from which variation variable needs to be retrieved.
+ @param variableKey The variableKey whose value is to the retrieved.
+
+ */
++ (BOOL) fromTest:(NSString*)testName getBooleanFor:(NSString*)variableKey;
+
 /** Returns the assetUrl associated with a given test asset variation variable. If there is none associated or the test failed to load then the defaultValue is returned.
  
  @param testName The test name from which variation variable needs to be retrieved.
@@ -98,6 +107,7 @@ extern NSString *const VesselABTestChangedNotification;
  @param defaultValue In case there is no variation variable named variationVariable or if the test failed to load then the defaultValue is returned.
  */
 + (NSString*) fromTest:(NSString*)testName getAssetUrl:(NSString*)variableKey defaultValue:(NSString *)defaultValue;
+
 
 /**
  Get the image associated with a given test variation variable. If there is none associated or the test failed to load then the will execute failure block.
