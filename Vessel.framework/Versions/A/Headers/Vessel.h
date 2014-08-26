@@ -45,5 +45,4 @@
 */
 - (void) setFilters:(NSDictionary *) filters;
 
-
 @end
