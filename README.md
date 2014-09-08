@@ -2,11 +2,11 @@ Vessel iOS-framework (Studio Beta)
 =============
 
 
-<strong>Step I: Download</strong>
+<strong>Step I: Register Your Application</strong>
 
-1.Login to Vessel Command Center
-2.Add your application
-3.Get Vessel Secret Key
+1. Login to Vessel Command Center
+2. Add your application
+3. Get Vessel Secret Key
 
 <strong>Step II: Unzip and Install</strong>
 
