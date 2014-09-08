@@ -10,9 +10,9 @@ Vessel iOS-framework (Studio Beta)
 
 <strong>Step II: Unzip and Install</strong>
 
-1.Make sure you are using the latest version of Xcode (v4.6+) and targeting iOS 4.3 or higher.
-2.Download https://github.com/vesselio/ABTesting/archive/Studio.zip
-2.Unzip the file and drag the Vessel.framework folder into your Xcode project folder target.
+1. Make sure you are using the latest version of Xcode (v4.6+) and targeting iOS 4.3 or higher.
+2. Download https://github.com/vesselio/ABTesting/archive/Studio.zip
+2. Unzip the file and drag the Vessel.framework folder into your Xcode project folder target.
 
 
 <strong>Step III: Link libraries</strong>
