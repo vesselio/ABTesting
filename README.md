@@ -17,6 +17,7 @@ If you are using then add following line in you Podfile
 platform :ios, '6.0'
 pod 'ABTestingVessel', :git =>'https://github.com/vesselio/ABTesting', :branch => 'Studio'
 
+Or 
 
 <strong>Step II: Unzip and Install</strong>
 
@@ -25,7 +26,7 @@ pod 'ABTestingVessel', :git =>'https://github.com/vesselio/ABTesting', :branch =
 2. Unzip the file and drag the Vessel.framework folder into your Xcode project folder target.
 
 
-<strong>Step III: Link libraries</strong>
+<strong>Step II|: Link libraries</strong>
 
 1.Select you project in Xcode<br>
 2.Click your app name under Targets<br>
