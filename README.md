@@ -8,6 +8,16 @@ Vessel iOS-framework (Studio Beta)
 2. Add your application
 3. Get Vessel Secret Key
 
+
+<strong>Step I: Cocoapod Users</strong>
+
+If you are using then add following line in you Podfile
+
+
+platform :ios, '6.0'
+pod 'ABTestingVessel', :git =>'https://github.com/vesselio/ABTesting', :branch => 'Studio'
+
+
 <strong>Step II: Unzip and Install</strong>
 
 1. Make sure you are using the latest version of Xcode (v4.6+) and targeting iOS 4.3 or higher.
