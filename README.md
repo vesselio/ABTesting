@@ -14,7 +14,7 @@ Vessel iOS-framework (Studio Beta)
 If you are using then add following line in you Podfile
 
 
-platform :ios, '6.0'
+platform :ios, '6.0' <br>
 pod 'ABTestingVessel', :git =>'https://github.com/vesselio/ABTesting', :branch => 'Studio'
 
 Or 
