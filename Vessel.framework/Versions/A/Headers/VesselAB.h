@@ -1,7 +1,7 @@
 //
 //  VesselAB.h
-//  Vessel Framework Version 1.2.5
-//
+//  Vessel Framework Version 1.2
+// 
 //  Copyright (c) 2014 Vessel. All rights reserved.
 //
 
@@ -70,13 +70,6 @@ extern NSString *const VesselABTestChangedNotification;
 + (BOOL) isTestAvailable:(NSString *)testName;
 
 
-/**
- From Framework v1.2 Vessel  handles test activation automatically
- @param testName - Look and activate test with given name
-*/
-+ (void) activateTest:(NSString *)testName __deprecated;
-
-
 /** Returns the variation for a particular test name. If the test assigned to the device doesn't match testName then VesselABTestVariationUnknown is returned.
  @param testName variation assigned to the test
  */
@@ -101,32 +94,31 @@ extern NSString *const VesselABTestChangedNotification;
 + (BOOL) fromTest:(NSString*)testName getBooleanFor:(NSString*)variableKey;
 
 /** Returns the assetUrl associated with a given test asset variation variable. If there is none associated or the test failed to load then the defaultValue is returned.
-  +
-  + @param testName The test name from which variation variable needs to be retrieved.
-  + @param variableKey The variableKey whose value is to the retrieved.
-  + @param defaultValue In case there is no variation variable named variationVariable or if the test failed to load then the defaultValue is returned.
-  + */
+ 
+ @param testName The test name from which variation variable needs to be retrieved.
+ @param variableKey The variableKey whose value is to the retrieved.
+ @param defaultValue In case there is no variation variable named variationVariable or if the test failed to load then the defaultValue is returned.
+ */
 + (NSString*) fromTest:(NSString*)testName getAssetUrl:(NSString*)variableKey defaultValue:(NSString *)defaultValue;
 
 
 /**
-  + Get the image associated with a given test variation variable. If there is none associated or the test failed to load then the will execute failure block.
-  +*/
+ Get the image associated with a given test variation variable. If there is none associated or the test failed to load then the will execute failure block.
+*/
 +(void) fromTest:(NSString*)testName getImageFor:(NSString*)variableKey success:(void (^)(UIImage *variationImage)) success failureBlock:(void (^)())failure;
-
 
 /** Reports a checkpoint to the Vessel server for given active test.
  
  @param checkpointName The checkpoint to be reported.
  @param testName The name of the test for which checkpoint will be reported.
  */
-+ (void) reportCheckPoint:(NSString*)checkpointName forTest:(NSString*)testName;
++ (void) reportCheckPoint:(NSString*)checkpointName forTest:(NSString*)testName __deprecated;
 
 /** Reports a checkpoint to the Vessel server
  
  @param checkpointName The checkpoint to be reported.
  */
-+ (void) reportCheckPoint:(NSString*)checkpointName;
++ (void) reportCheckPoint:(NSString*)checkpointName __deprecated;
 
 
 /** Reports a checkpoint to the Vessel server for given active test with metaData.
@@ -135,7 +127,7 @@ extern NSString *const VesselABTestChangedNotification;
  @param testName The name of the test for which checkpoint will be reported.
  @param metaData Extra meta data will be reported at this checkpoint
  */
-+ (void) reportCheckPoint:(NSString*)checkpointName forTest:(NSString*)testName with:(NSDictionary *) metaData;
++ (void) reportCheckPoint:(NSString*)checkpointName forTest:(NSString*)testName with:(NSDictionary *) metaData __deprecated;
 
 /** Reports a checkpoint to the Vessel server
  
@@ -143,38 +135,43 @@ extern NSString *const VesselABTestChangedNotification;
  @param metaData Extra meta data will be reported at this checkpoint
 
  */
-+ (void) reportCheckPoint:(NSString*)checkpointName with:(NSDictionary *) metaData;
++ (void) reportCheckPoint:(NSString*)checkpointName with:(NSDictionary *) metaData __deprecated;
 
 /** Starts a new session.
  
  @param sessionName The session that is to be started.
  */
-+ (void) startSession:(NSString*)sessionName;
++ (void) startSession:(NSString*)sessionName __deprecated;
 
 /** Ends a started session.
  
  @param sessionName The session to be ended. Note that the session has to be started to end it.
  */
-+ (void) endSession:(NSString*)sessionName;
++ (void) endSession:(NSString*)sessionName __deprecated;
 
 /** Ends all sessions that have been started but haven't been ended yet.
  */
-+ (void) endAllSessions;
++ (void) endAllSessions __deprecated;
 
 /** Discards all sessions that have been started but haven't been ended yet.
  */
-+ (void) discardAllSessions;
++ (void) discardAllSessions __deprecated;
 
 /** Returns the user identifier set for the sessions and checkpoints.
  */
-+ (NSString*) userId;
++ (NSString*) userId __deprecated;
 
 /** Sets a user identifier for the sessions and checkpoints.
  
 @param userId A string to be associated with sessions and checkpoints.
  */
-+ (void) setUserId:(NSString*)userId;
++ (void) setUserId:(NSString*)userId __deprecated;
 
 
+/**
+ From Framework v1.2 Vessel  handles test activation automatically
+ @param testName - Look and activate test with given name
+ */
++ (void) activateTest:(NSString *)testName __deprecated;
 
 @end

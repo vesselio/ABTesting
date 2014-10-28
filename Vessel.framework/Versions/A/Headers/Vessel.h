@@ -1,11 +1,13 @@
 //
 //  Vessel.h
-//  Vessel Framework Version 1.2.5
+//  Vessel Framework Version 1.2
 //
 //  Copyright (c) 2014 Vessel. All rights reserved.
 //
 
 #import <Vessel/VesselAB.h>
+#import <Vessel/VesselUserAttributes.h>
+
 
 /** The Vessel class is used to initialize the Vessel SDK for AB Testing. 
  */
@@ -26,8 +28,15 @@
 /** Initializes Vessel SDK. This method should be called before calling any other Vessel SDK method.
  
  @param appSecret An app secret used to initialize the app.
+ */
+- (void) initializeWithAppSecret:(NSString*)appSecret launchOptions:(NSDictionary *)launchOptions;
+
+
+/** Initializes Vessel SDK. This method should be called before calling any other Vessel SDK method.
+ 
+ @param appSecret An app secret used to initialize the app.
 */
-- (void) initializeWithAppSecret:(NSString*)appSecret;
+- (void) initializeWithAppSecret:(NSString*)appSecret __deprecated;
 
 
 /** The timeout interval, in seconds. If during a connection attempt the request remains idle for longer
@@ -45,5 +54,55 @@
 */
 - (void) setFilters:(NSDictionary *) filters;
 
+/** Starts a new session.
+ 
+ @param sessionName The session that is to be started.
+ */
+- (void) startSession:(NSString*)sessionName;
+
+/** Ends a started session.
+ 
+ @param sessionName The session to be ended. Note that the session has to be started to end it.
+ */
+- (void) endSession:(NSString*)sessionName;
+
+/** Ends all sessions that have been started but haven't been ended yet.
+ */
+- (void) endAllSessions;
+
+/** Discards all sessions that have been started but haven't been ended yet.
+ */
+- (void) discardAllSessions;
+
+
+/** Reports a checkpoint to the Vessel server
+ 
+ @param checkpointName The checkpoint to be reported.
+ @param metaData Extra meta data will be reported at this checkpoint
+ 
+ */
+- (void) reportCheckPoint:(NSString*)checkPointName withMetaData:(NSDictionary *) metaData;
+
+
+/** Reports a checkpoint to the Vessel server for given active test with metaData.
+ 
+ @param checkpointName The checkpoint to be reported.
+ @param testName The name of the test for which checkpoint will be reported.
+ @param metaData Extra meta data will be reported at this checkpoint
+ */
+- (void) reportCheckPoint:(NSString*)checkPointName forTest:(NSString*)testName with:(NSDictionary *) metaData ;
+
+
+- (void) setUserAttributes:(VesselUserAttributes *) userAttributes;
+
+
+- (void) registerPushDeviceToken:(NSData *)deviceToken;
+
+
+- (void) trackPushNotification:(NSDictionary *) userInfo;
+
+- (void) handlePushNotification:(NSDictionary *) userInfo;
+
+- (BOOL) isPushRegistered;
 
 @end
