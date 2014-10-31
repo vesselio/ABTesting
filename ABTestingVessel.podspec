@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
 
   s.source = { :git => 'https://github.com/vesselio/ABTesting.git', :branch => "Studio" }
   s.platform = :ios, '6.0'
-  s.frameworks = 'SystemConfiguration','CFNetwork','Security'
+  s.frameworks = 'SystemConfiguration','CFNetwork','Security','CoreTelephony'
   s.requires_arc = true
   s.library      = 'sqlite3','icucore'
   s.preserve_paths = 'Vessel.framework'

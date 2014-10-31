@@ -1,6 +1,6 @@
 //
 //  Vessel.h
-//  Vessel Framework Version 1.2
+//  Vessel Framework Version 1.3
 //
 //  Copyright (c) 2014 Vessel. All rights reserved.
 //
@@ -90,7 +90,7 @@
  @param testName The name of the test for which checkpoint will be reported.
  @param metaData Extra meta data will be reported at this checkpoint
  */
-- (void) reportCheckPoint:(NSString*)checkPointName forTest:(NSString*)testName with:(NSDictionary *) metaData ;
+- (void) reportCheckPoint:(NSString*)checkPointName forTest:(NSString*)testName withMetaData:(NSDictionary *) metaData ;
 
 
 - (void) setUserAttributes:(VesselUserAttributes *) userAttributes;
