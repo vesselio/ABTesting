@@ -1,4 +1,4 @@
-Vessel iOS-framework (Studio Beta)
+Vessel iOS-framework
 =============
 
 
