@@ -1,6 +1,6 @@
 //
 //  VesselAB.h
-//  Vessel Framework Version 1.2
+//  Vessel Framework Version 1.3
 // 
 //  Copyright (c) 2014 Vessel. All rights reserved.
 //
@@ -119,13 +119,13 @@ extern NSString *const VesselABTestChangedNotification;
  @param checkpointName The checkpoint to be reported.
  @param testName The name of the test for which checkpoint will be reported.
  */
-+ (void) reportCheckPoint:(NSString*)checkpointName forTest:(NSString*)testName;
++ (void) reportCheckPoint:(NSString*)checkpointName forTest:(NSString*)testName __deprecated;
 
 /** Reports a checkpoint to the Vessel server
  
  @param checkpointName The checkpoint to be reported.
  */
-+ (void) reportCheckPoint:(NSString*)checkpointName;
++ (void) reportCheckPoint:(NSString*)checkpointName __deprecated;
 
 
 /** Reports a checkpoint to the Vessel server for given active test with metaData.
@@ -134,7 +134,7 @@ extern NSString *const VesselABTestChangedNotification;
  @param testName The name of the test for which checkpoint will be reported.
  @param metaData Extra meta data will be reported at this checkpoint
  */
-+ (void) reportCheckPoint:(NSString*)checkpointName forTest:(NSString*)testName with:(NSDictionary *) metaData;
++ (void) reportCheckPoint:(NSString*)checkpointName forTest:(NSString*)testName with:(NSDictionary *) metaData __deprecated;
 
 /** Reports a checkpoint to the Vessel server
  
@@ -142,36 +142,37 @@ extern NSString *const VesselABTestChangedNotification;
  @param metaData Extra meta data will be reported at this checkpoint
 
  */
-+ (void) reportCheckPoint:(NSString*)checkpointName with:(NSDictionary *) metaData;
++ (void) reportCheckPoint:(NSString*)checkpointName with:(NSDictionary *) metaData __deprecated;
 
 /** Starts a new session.
  
  @param sessionName The session that is to be started.
  */
-+ (void) startSession:(NSString*)sessionName;
++ (void) startSession:(NSString*)sessionName __deprecated;
 
 /** Ends a started session.
  
  @param sessionName The session to be ended. Note that the session has to be started to end it.
  */
-+ (void) endSession:(NSString*)sessionName;
++ (void) endSession:(NSString*)sessionName __deprecated;
 
 /** Ends all sessions that have been started but haven't been ended yet.
  */
-+ (void) endAllSessions;
++ (void) endAllSessions __deprecated;
 
 /** Discards all sessions that have been started but haven't been ended yet.
  */
-+ (void) discardAllSessions;
++ (void) discardAllSessions __deprecated;
 
 /** Returns the user identifier set for the sessions and checkpoints.
  */
-+ (NSString*) userId;
++ (NSString*) userId __deprecated;
 
 /** Sets a user identifier for the sessions and checkpoints.
  
 @param userId A string to be associated with sessions and checkpoints.
  */
-+ (void) setUserId:(NSString*)userId;
++ (void) setUserId:(NSString*)userId __deprecated;
+
 
 @end
