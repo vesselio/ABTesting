@@ -70,13 +70,6 @@ extern NSString *const VesselABTestChangedNotification;
 + (BOOL) isTestAvailable:(NSString *)testName;
 
 
-/**
- From Framework v1.2 Vessel  handles test activation automatically
- @param testName - Look and activate test with given name
-*/
-+ (void) activateTest:(NSString *)testName __deprecated;
-
-
 /** Returns the variation for a particular test name. If the test assigned to the device doesn't match testName then VesselABTestVariationUnknown is returned.
  @param testName variation assigned to the test
  */
@@ -174,5 +167,11 @@ extern NSString *const VesselABTestChangedNotification;
  */
 + (void) setUserId:(NSString*)userId __deprecated;
 
+
+/**
+ From Framework v1.2 Vessel  handles test activation automatically
+ @param testName - Look and activate test with given name
+ */
++ (void) activateTest:(NSString *)testName __deprecated;
 
 @end

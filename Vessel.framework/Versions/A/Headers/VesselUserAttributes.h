@@ -94,6 +94,11 @@
 -(void) setBirthDay:(NSString *) birthday;
 
 /**
+ Set users fb profile page.
+ */
+-(void) setProfileURL:(NSString *) url;
+
+/**
  Set users profile pic.
  */
 -(void) setProfilePicURL:(NSString *) url;

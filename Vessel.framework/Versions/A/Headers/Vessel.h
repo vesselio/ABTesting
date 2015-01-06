@@ -92,38 +92,33 @@
  */
 - (void) reportCheckPoint:(NSString*)checkPointName forTest:(NSString*)testName withMetaData:(NSDictionary *) metaData ;
 
-/**
- Report user a profile to the Vessel server. You can additional send any custom meta data. To recognize user distinctly you can set id.
- @param userAttributes : Create a userAtrributes object
-*/
+
 - (void) setUserAttributes:(VesselUserAttributes *) userAttributes;
 
-
-/*
- Register push token from an NSData-encoded token.
- */
+/** In order to receive push notifications from Vessel. 
+ You need to register the device token with Vessel.
+ @param deviceToken Pass the push token
+*/
 - (void) registerPushDeviceToken:(NSData *)deviceToken;
 
-/**
- Call this from application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo method
+
+/** Helper method to track push notification manually. Ideally call this method from
+  application:didReceiveRemoteNotification:
  
- @param: UserInfo you have received from remote notification
+ @param userInfo: Pass the userinfo.
 */
 - (void) trackPushNotification:(NSDictionary *) userInfo;
 
 /**
- Call this from application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo method
- 
- If you want Vessel to handle push notification then use this method.
- 
- @param: UserInfo you have received from remote notification
+ Helper method to handle push notification, it will show & track push notification based on
+ platform side configuration
  */
 - (void) handlePushNotification:(NSDictionary *) userInfo;
 
-
 /**
-  Helper method to check if push token is registered with Vessel.
- */
+ Helper method to check if push notification is registered on this device.
+*/
+
 - (BOOL) isPushRegistered;
 
 @end
